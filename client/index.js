@@ -64,7 +64,7 @@ var newConnection = function() {
 		auth: urlParts.auth,
 		hostname: (urlParts.hostname === '0.0.0.0') ? window.location.hostname : urlParts.hostname,
 		port: (urlParts.port === '0') ? window.location.port : urlParts.port,
-		pathname: urlParts.path == null || urlParts.path === '/' ? "/sockjs-node" : urlParts.path
+		pathname: 'sockjs-node'
 	}));
 
 	sock.onclose = function() {
